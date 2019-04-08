@@ -1,8 +1,20 @@
-.masthead {
+.carousel-item {
   height: 94vh;
-  min-height: 500px;
-  background-image: url("https://source.unsplash.com/BtbjCFUvBXs/1920x1080");
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+@media (max-width: 767px) {
+  .d-md-block {
+    display: block!important;
+  }
+  .display-4 {
+    font-size: x-large;
+  }
+  .lead {
+    font-size: medium;
+  }
 }
