@@ -60,3 +60,6 @@ $(document).ready(function () {
         toggleAffix(ele, $(window), wrapper);
     });
 });
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
