@@ -1,0 +1,49 @@
+a,a:hover {
+    color: var(--red)
+  }
+  
+nav .navbar-nav li a:hover,nav .navbar-nav li.active a {
+    color: var(--red)!important
+}
+
+.featurette-divider {
+    margin: 5rem 0;
+    width : 70vw;
+    background-color: var(--red);
+    opacity: .15
+}
+  
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem
+}
+
+.all {
+    text-align: right;
+}
+
+@media (min-width:40em) {
+    .featurette-heading {
+        font-size: 50px
+    }
+}
+  
+@media (min-width:62em) {
+    .featurette-heading {
+        margin-top: 7rem
+    }
+}
+@media (max-width:767px) {
+    .row.featurette {
+        text-align: center
+    }
+
+    .all {
+        text-align: center
+    }
+
+    .featurette-heading {
+        margin-top: 1rem
+    }
+}
