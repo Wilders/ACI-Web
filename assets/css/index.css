@@ -1,5 +1,5 @@
 .carousel-item {
-  height: 50vh;
+  height: 70vh;
   min-height: 350px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
@@ -40,4 +40,27 @@
   margin: 15px 0;
   text-transform: none;
   color: black;
+}
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  background-color: var(--red);
+  opacity: 0.15;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+@media (min-width: 40em) {
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 62em) {
+  .featurette-heading {
+    margin-top: 7rem;
+  }
 }
