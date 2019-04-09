@@ -4,7 +4,6 @@
     <!-- Standard Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="description" content="Site Web de l'Association Charlemagne Informatique" />
     <meta name="keywords" content="ACI, Association Charlemagne Informatique, DUT Informatique, IUT Nancy Charlemagne, Nancy-Charlemagne" />
     <meta name="author" content="Jules Sayer <jules.sayr@gmail.com>" />
@@ -25,45 +24,46 @@
     <meta property="og:site_name" content="ACI" />
     <!-- Page informations -->
     <title>ACI - Accueil</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   </head>
   <body>
     <!-- Header -->
     <header>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div id="carousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <li data-target="#carousel" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/rSFxBGpnluw/1920x1080')">
             <div class="carousel-caption d-none d-md-block">
-              <h2 class="display-4">Association Charlemagne Informatique</h2>
+              <h1 class="display-4">Association Charlemagne Informatique</h1>
               <p class="lead">Bienvenue sur notre site.</p>
             </div>
           </div>
-          <div class="carousel-item" style="background-image: url('assets/images/equipe.png')">
+          <div class="carousel-item" style="background-image: url('assets/images/equipe.jpg')">
             <div class="carousel-caption d-none d-md-block">
-              <h2 class="display-4">Votre bureau</h2>
+              <h1 class="display-4">Votre bureau</h1>
               <p class="lead">Et ses belles têtes de vainqueurs.</p>
             </div>
           </div>
           <div class="carousel-item" style="background-image: url('https://source.unsplash.com/MxfcoxycH_Y/1920x1080')">
             <div class="carousel-caption d-none d-md-block">
-              <h2 class="display-4">Le weekend de désintégration</h2>
+              <h1 class="display-4">Le weekend de désintégration</h1>
               <p class="lead">On en parle un peu plus bas!</p>
             </div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Précédent</span>
         </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Suivant</span>
         </a>
@@ -72,7 +72,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" data-toggle="affix">
       <div class="container">
-        <a class="navbar-brand" href="/"><img src ="assets/images/logo.png" height="28" width="28"></a>
+        <a class="navbar-brand" href="/"><img src ="assets/images/logo.png" height="28" width="28" alt="Logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -100,15 +100,13 @@
     <!-- Countdown -->
     <section class="py-5 bg-light">
       <div class="container text-center" id="main">
-        <h1 class="display-4">Hey, c'est bientôt le weekend-end de désintégration!</h1>
+        <h2 class="display-4">Hey, c'est bientôt le weekend-end de désintégration!</h2>
         <p class="lead">Vous êtes impatients? Découvrez-ici ce qui vous attends...</p>
         <hr class="separator">
         <p>Au fait, le décompte est lancé:</p>
-        <p>
-          <div id="clockdiv">
-            <span class="display-4 days"></span> jours, <span class="display-4 hours"></span> heures, <span class="display-4 minutes"></span> minutes, <span class="display-4 seconds"></span> secondes..
-          </div>
-        </p>
+        <div id="clockdiv">
+          <span class="display-4 days"></span> jours, <span class="display-4 hours"></span> heures, <span class="display-4 minutes"></span> minutes, <span class="display-4 seconds"></span> secondes..
+        </div>
       </div>
     </section>
     <!-- Infos -->
@@ -173,7 +171,7 @@
             <p class="lead">Un système d'équipe et de points vous suivra tout au long des jeux de la première journée. N'oubliez pas qu'il n'y aura qu'une seule équipe vainqueur et que seule celle-ci gagnera des lots.</p>
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid rounded-circle border border-danger mx-auto" src="https://source.unsplash.com/mGFJIUD9yiM/500x500" alt="">
+            <img class="featurette-image img-fluid rounded-circle border border-danger mx-auto" src="https://source.unsplash.com/mGFJIUD9yiM/500x500" alt="Un ventre-y-glisse">
           </div>
         </div>
         
@@ -193,9 +191,9 @@
     </section>
     <section class="py-5">
       <div class="container text-center">
-        <h1 class="display-4">Alors, convaincu?</h1>
+        <h2 class="display-4">Alors, convaincu?</h2>
         <hr class="separator">
-        <p class="lead" data-toggle="tooltip" data-placement="top" title="Votre place n'est reservée que lorsque vous payez.">Contact-nous vite pour avoir ta place, car elles sont limitées.</p>
+        <p class="lead" data-toggle="tooltip" data-placement="top" title="Votre place n'est reservée que lorsque vous payez.">Contacte-nous vite pour avoir ta place, car elles sont limitées.</p>
       </div>
     </section>
     <!-- FOOTER -->

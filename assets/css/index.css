@@ -1,75 +1,75 @@
-body a {
-  color: var(--red);
+a,a:hover {
+  color: var(--red)
 }
-body a:hover {
-  color: var(--red);
+
+nav .navbar-nav li a:hover,nav .navbar-nav li.active a {
+  color: var(--red)!important
 }
-nav .navbar-nav li a:hover, nav .navbar-nav li.active a{
-  color: var(--red)!important;
-}
+
 .carousel-item {
   height: 70vh;
   min-height: 350px;
-  background: no-repeat center center scroll;
+  background: no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover
 }
+
 .affix {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 1030
 }
-.sectionTitle{
-  color: var(--green);
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
-}
+
 .separator {
-	width: 100px;
-	height: 3px;
-	background-color: var(--red);
+  width: 100px;
+  height: 3px;
+  background-color: var(--red)
 }
-@media (max-width: 767px) {
-  .d-md-block {
-    display: block!important;
-  }
-  .display-4 {
-    font-size: x-large;
-  }
-  .lead {
-    font-size: medium;
-  }
-}
+
 .infos-heading {
   margin: 15px 0;
   text-transform: none;
-  color: black;
-}
-.featurette-divider {
-  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
-  background-color: var(--red);
-  opacity: 0.15;
+  color: #000
 }
 
-/* Thin out the marketing headings */
+.featurette-divider {
+  margin: 5rem 0;
+  background-color: var(--red);
+  opacity: .15
+}
+
 .featurette-heading {
   font-weight: 300;
   line-height: 1;
-  letter-spacing: -.05rem;
+  letter-spacing: -.05rem
 }
-@media (min-width: 40em) {
-  .featurette-heading {
-    font-size: 50px;
+
+@media (max-width:767px) {
+  .d-md-block {
+      display: block!important
+  }
+
+  .display-4 {
+      font-size: x-large
+  }
+
+  .lead {
+      font-size: medium
   }
 }
 
-@media (min-width: 62em) {
+@media (min-width:40em) {
   .featurette-heading {
-    margin-top: 7rem;
+      font-size: 50px
+  }
+}
+
+@media (min-width:62em) {
+  .featurette-heading {
+      margin-top: 7rem
   }
 }
