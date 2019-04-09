@@ -15,18 +15,18 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="ACI - Accueil" />
     <meta name="twitter:description" content="Site Web de l'Association Charlemagne Informatique" />
-    <meta name="twitter:image" content="https://infoenmarche.fr/public/images/logo.png" />
+    <meta name="twitter:image" content="https://infoenmarche.fr/assets/images/logo.png" />
     <meta name="twitter:creator" content="@ImWilders" />
     <meta property="og:title" content="ACI - Accueil">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://infoenmarche.fr" />
-    <meta property="og:image" content="https://infoenmarche.fr/public/images/logo.png" />
+    <meta property="og:image" content="https://infoenmarche.fr/assets/images/logo.png" />
     <meta property="og:description" content="Site Web de l'Association Charlemagne Informatique" />
     <meta property="og:site_name" content="ACI" />
     <!-- Page informations -->
     <title>ACI - Accueil</title>
-    <link rel="icon" type="image/png" href="public/images/favicon.png" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
@@ -98,59 +98,40 @@
       </div>
     </nav>
     <!-- Page Content -->
-    <section class="py-4 bg-dark">
-      <div class="container" id="main">
-        <div class="container text-center">
-          <h1 class="mt-5 font-weight-light sectionTitle">QUELQUES INFOS SUR LE WEEK-END DE DÉSINTÉ</h1>
-          <hr class="separator">
-          </hr>
-          <div class="card text-white bg-dark mb-3">
-            <div class="card-header">Décompte <i class="ml-1 fas fa-glass-cheers"></i></div>
-            <div class="card-body">
-              <div id="clockdiv">
-                <div>
-                  <span class="days"></span>
-                  <div class="smalltext">Jours</div>
-                </div>
-                <div>
-                  <span class="hours"></span>
-                  <div class="smalltext">Heures</div>
-                </div>
-                <div>
-                  <span class="minutes"></span>
-                  <div class="smalltext">Minutes</div>
-                </div>
-                <div>
-                  <span class="seconds"></span>
-                  <div class="smalltext">Secondes</div>
-                </div>
-              </div>
-            </div>
+    <section class="py-4 bg-light">
+      <div class="container text-center py-5" id="main">
+        <h1 class="display-4">Hey, c'est bientôt le weekend-end de désintégration!</h1>
+        <p class="lead">Vous êtes impatients? Découvrez-ici ce qui vous attends...</p>
+        <hr class="separator">
+        <p>Au fait, le décompte est lancé:</p>
+        <p>
+          <div id="clockdiv">
+            <span class="display-4 days"></span> jours, <span class="display-4 hours"></span> heures, <span class="display-4 minutes"></span> minutes, <span class="display-4 seconds"></span> secondes..
           </div>
-        </div>
+        </p>
       </div>
     </section>
     <!-- Infos -->
-    <section id="infos" class="py-5 bg-dark">
+    <section id="infos" class="py-5">
       <div class="container text-center">
         <div class="row text-center">
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
-              <i class="fas fa-circle fa-stack-2x text-success"></i>
+              <i class="fas fa-circle fa-stack-2x text-danger"></i>
               <i class="fas fa-utensils fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="infos-heading">Nourriture</h4>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
-              <i class="fas fa-circle fa-stack-2x text-success"></i>
+              <i class="fas fa-circle fa-stack-2x text-danger"></i>
               <i class="fas fa-beer fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="infos-heading">Alcool</h4>
           </div>
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
-              <i class="fas fa-circle fa-stack-2x text-success"></i>
+              <i class="fas fa-circle fa-stack-2x text-danger"></i>
               <i class="fas fa-dice-d6 fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="infos-heading">Jeux</h4>

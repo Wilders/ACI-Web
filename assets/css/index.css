@@ -1,5 +1,5 @@
 .carousel-item {
-  height: 94vh;
+  height: 50vh;
   min-height: 350px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
@@ -20,34 +20,10 @@
   font-size: 40px;
   margin: 40px 0px 20px;
 }
-#clockdiv{
-	font-family: sans-serif;
-	color: #fff;
-	display: inline-block;
-	font-weight: 100;
-	text-align: center;
-	font-size: 40px;
-}
-#clockdiv > div{
-	padding: 20px;
-	border-radius: 6px;
-	background: var(--dark);
-	display: inline-block;
-}
-#clockdiv div > span{
-	padding: 30px;
-	border-radius: 6px;
-	background: var(--green);
-	display: inline-block;
-}
-.smalltext{
-	padding-top: 10px;
-	font-size: 32px;
-}
 .separator {
 	width: 100px;
 	height: 3px;
-	background-color: var(--green);
+	background-color: var(--red);
 }
 @media (max-width: 767px) {
   .d-md-block {
@@ -63,5 +39,5 @@
 .infos-heading {
   margin: 15px 0;
   text-transform: none;
-  color: white;
+  color: black;
 }
