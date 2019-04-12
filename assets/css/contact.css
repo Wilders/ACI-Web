@@ -1,0 +1,28 @@
+a,a:hover {
+    color: var(--red)
+  }
+  
+nav .navbar-nav li a:hover,nav .navbar-nav li.active a {
+    color: var(--red)!important
+}
+.form-control:focus {
+  border-color: var(--red);
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+label {
+  color: #333;
+}
+
+.btn-send {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 20px;
+}
+
+.help-block.with-errors {
+  color: var(--red);
+  margin-top: 5px;
+}

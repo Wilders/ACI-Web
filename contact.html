@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Standard Meta -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Site Web de l'Association Charlemagne Informatique" />
+        <meta name="keywords" content="ACI, Association Charlemagne Informatique, DUT Informatique, IUT Nancy Charlemagne, Nancy-Charlemagne" />
+        <meta name="author" content="Jules Sayer <jules.sayr@gmail.com>" />
+        <meta name="author" content="Flavien Chagras <chagras.flavien@gmail.com>" />
+        <meta name="robots" content="index, follow, noarchive, noimageindex" />
+        <meta name="google" content="notranslate" />
+        <!-- Social Media Meta -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="ACI - Contact" />
+        <meta name="twitter:description" content="Site Web de l'Association Charlemagne Informatique" />
+        <meta name="twitter:image" content="https://infoenmarche.fr/assets/images/logo.png" />
+        <meta name="twitter:creator" content="@ImWilders" />
+        <meta property="og:title" content="ACI - Contact">
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://infoenmarche.fr" />
+        <meta property="og:image" content="https://infoenmarche.fr/assets/images/logo.png" />
+        <meta property="og:description" content="Site Web de l'Association Charlemagne Informatique" />
+        <meta property="og:site_name" content="ACI" />
+        <!-- Page informations -->
+        <title>ACI - Contact</title>
+        <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="assets/css/bootstrap.css" />
+        <link rel="stylesheet" href="assets/css/contact.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top" data-toggle="affix">
+            <div class="container">
+                <a class="navbar-brand" href="/"><img src="assets/images/logo.png" height="28" width="28" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html">L'Équipe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Projets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="partners.html">Partenariats</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <!-- Header -->
+            <header class="bg-danger text-center py-5 mt-5">
+                <div class="container">
+                    <h1 class="display-4 text-white">Contactez-nous</h1>
+                </div>
+            </header>
+            <!-- Contact -->
+            <div class="container-fluid py-2">
+                <div class="row">
+                    <div class="col-xl-8 offset-xl-2 py-5">
+                        <form id="contact-form" method="POST" action="contact.php">
+                            <div class="messages"></div>
+                            <div class="controls">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="form_lastname">Nom *</label>
+                                            <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Entrez votre nom *" required="required" data-error="Votre nom est requis.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="form_name">Prénom *</label>
+                                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Entrez votre prénom *" required="required" data-error="Votre prénom est requis.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="form_email">Email *</label>
+                                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Entrez votre adresse email *" required="required" data-error="Une adresse e-mail valide est requis.">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="form_need">Raison *</label>
+                                            <select id="form_need" name="need" class="form-control" required="required" data-error="Indiquez la raison.">
+                                                <option value="">&nbsp;</option>
+                                                <option value="Information">Information</option>
+                                                <option value="Partenaria">Partenariat</option>
+                                                <option value="Autres">Autres</option>
+                                            </select>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="form_message">Message *</label>
+                                            <textarea id="form_message" name="message" class="form-control" placeholder="Votre plus beau message *" rows="4" required="required" data-error="On veut un message!"></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="submit" class="btn btn-danger btn-send" value="Envoyer">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="text-muted"><strong>*</strong> Champ obligatoire</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2018-2019 Association Charlemagne Informatique &middot; <a href="contact.html">Contact</a> &middot; <a href="https://www.facebook.com/groups/322540304989499/">Facebook</a></p>
+        </footer>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108435065-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-108435065-2');
+        </script>
+        <script src="assets/js/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/validator.min.js"></script>
+        <script src="assets/js/contact.js"></script>
+    </body>
+</html>
