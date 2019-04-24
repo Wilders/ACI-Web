@@ -30,3 +30,24 @@ if(isset($answer)) {
     header('Content-Type: application/json');
     echo json_encode($answer);
 }
+
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=aci - web;charset=utf8', 'root', 'root');
+}
+catch (Exception $e)
+{
+        die('Erreur : ' . $e->getMessage());
+}
+
+$bdd->exec('INSERT INTO contact(nom, prenom, email, raison, msg, dateMsg) VALUES(:nom, :prenom, :email, :raison, :msg, :dateMsg)');
+
+$datetime = date("Y-m-d H:i:s");
+$req->execute(array(
+	'nom' =>  $_POST['name'],
+    'prenom' => $_POST['surname'],
+    'email' => $_POST['email'],
+    'raison' => $_POST['need'],
+    'msg' => $_POST['message'],
+    'dateMsg' => $datetime
+));

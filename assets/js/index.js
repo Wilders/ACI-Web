@@ -36,7 +36,7 @@ function initializeClock(id, endtime) {
     updateClock();
     var timeinterval = setInterval(updateClock, 1000);
 }
-var deadline = new Date(Date.parse(new Date(2019, 06, 28, 14, 0, 0, 0)));
+var deadline = new Date(Date.parse(new Date(2019, 05, 28, 14, 0, 0, 0)));
 initializeClock('clockdiv', deadline);
 $(document).ready(function () {
     var toggleAffix = function (affixElement, scrollElement, wrapper) {
