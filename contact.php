@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 try {
     if(empty($_SERVER['HTTP_X_REQUESTED_WITH']) || strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
         throw new Exception("Le script n'est accessible que depuis le formulaire de contact :/");
@@ -20,6 +23,17 @@ try {
         throw new Exception("La raison n'est pas valide");
     }
 
+    $bdd = new PDO('mysql:host=localhost;dbname=aciweb;charset=utf8', 'root', 'root');
+    $req = $bdd->prepare('INSERT INTO contact(nom, prenom, email, raison, msg, dateMsg) VALUES(:nom, :prenom, :email, :raison, :msg, :dateMsg)');
+    $datetime = date("Y-m-d H:i:s");
+    $req->execute(array(
+        'nom' =>  htmlentities($_POST['name']),
+        'prenom' => htmlentities($_POST['surname']),
+        'email' => htmlentities($_POST['email']),
+        'raison' => htmlentities($_POST['need']),
+        'msg' => htmlentities($_POST['message']),
+        'dateMsg' => $datetime
+    ));
     $answer = array('type' => 'success', 'message' => 'Votre message a bien été envoyé :)');
 
 } catch(Exception $e) {
@@ -30,24 +44,3 @@ if(isset($answer)) {
     header('Content-Type: application/json');
     echo json_encode($answer);
 }
-
-try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=aci - web;charset=utf8', 'root', 'root');
-}
-catch (Exception $e)
-{
-        die('Erreur : ' . $e->getMessage());
-}
-
-$bdd->exec('INSERT INTO contact(nom, prenom, email, raison, msg, dateMsg) VALUES(:nom, :prenom, :email, :raison, :msg, :dateMsg)');
-
-$datetime = date("Y-m-d H:i:s");
-$req->execute(array(
-	'nom' =>  $_POST['name'],
-    'prenom' => $_POST['surname'],
-    'email' => $_POST['email'],
-    'raison' => $_POST['need'],
-    'msg' => $_POST['message'],
-    'dateMsg' => $datetime
-));
