@@ -7,11 +7,11 @@ try {
         throw new Exception("Le script n'est accessible que depuis le formulaire de contact :/");
     }
 
-    if(!isset($_POST['surname']) || !isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['need']) || !isset($_POST['message'])) {
+    if(!isset($_POST['surname']) || !isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['need']) || !isset($_POST['message']) || !isset($_POST['g-recaptcha-response'])) {
         throw new Exception("Un des champs est manquant");
     }
     
-    if (empty($_POST['surname']) || empty($_POST['name']) || empty($_POST['email']) || empty($_POST['need']) || empty($_POST['message'])) {
+    if (empty($_POST['surname']) || empty($_POST['name']) || empty($_POST['email']) || empty($_POST['need']) || empty($_POST['message']) || empty($_POST['g-recaptcha-response'])) {
         throw new Exception("Un des champs est vide");
     }
 
@@ -21,6 +21,21 @@ try {
 
     if (!in_array($_POST['need'], ['Information','Partenariat', 'Autres'], true)) {
         throw new Exception("La raison n'est pas valide");
+    }
+
+    $data = array('secret' => 'Secret', 'response' => $_POST['g-recaptcha-response']);
+    $options = array(
+        'http' => array(
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($data)
+        )
+    );
+    $context  = stream_context_create($options);
+    $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify", false, $context);
+    $responseKeys = json_decode($response,true);
+    if(!$responseKeys["success"]) {
+        throw new Exception("Le captcha n'est pas valide :/");
     }
 
     $bdd = new PDO('mysql:host=localhost;dbname=aciweb;charset=utf8', 'root', 'root');
