@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 try {
     if(empty($_SERVER['HTTP_X_REQUESTED_WITH']) || strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
         throw new Exception("Le script n'est accessible que depuis le formulaire de contact :/");
@@ -20,7 +23,7 @@ try {
         throw new Exception("La raison n'est pas valide");
     }
 
-    $data = array('secret' => 'Secret', 'response' => $_POST['g-recaptcha-response']);
+    $data = array('secret' => '6LfFL6AUAAAAAN1CQVBLrSlzaJUCq1PvzKFLsJAq', 'response' => $_POST['g-recaptcha-response']);
     $options = array(
         'http' => array(
             'header' => "Content-type: application/x-www-form-urlencoded\r\n",
@@ -35,7 +38,7 @@ try {
         throw new Exception("Le captcha n'est pas valide :/");
     }
 
-    $bdd = new PDO('mysql:host=localhost;dbname=aciweb;charset=utf8', 'root', 'root');
+    $bdd = new PDO('mysql:host=front-ha-mysql-01.shpv.fr;dbname=zcrhozfi_aci;charset=utf8', 'zcrhozfi_admin', 'aci-web2019');
     $req = $bdd->prepare('INSERT INTO contact(nom, prenom, email, raison, msg, dateMsg) VALUES(:nom, :prenom, :email, :raison, :msg, :dateMsg)');
     $datetime = date("Y-m-d H:i:s");
     $req->execute(array(
