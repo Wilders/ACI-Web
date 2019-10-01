@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c510a61-9fce-4210-b5dd-98085fe3c90f" name="Default Changelist" comment="" />
+    <list default="true" id="6cc2ce9b-1494-4c7e-ae94-70cdcb8e1045" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/infoenmarche.fr.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,10 +19,13 @@
       <executable />
     </execution>
   </component>
-  <component name="ProjectId" id="1RSWSZslbrzeHM429qYLjDPyy6B" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1RYUK8J8SfjWDiBoverxDPG7Lii" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -35,17 +44,34 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4c510a61-9fce-4210-b5dd-98085fe3c90f" name="Default Changelist" comment="" />
-      <created>1569660977716</created>
+      <changelist id="6cc2ce9b-1494-4c7e-ae94-70cdcb8e1045" name="Default Changelist" comment="" />
+      <created>1569843455837</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1569660977716</updated>
-      <workItem from="1569660978870" duration="281000" />
-      <workItem from="1569750983501" duration="4078000" />
+      <updated>1569843455837</updated>
+      <workItem from="1569843460708" duration="2016000" />
+      <workItem from="1569852453067" duration="146000" />
+      <workItem from="1569852610685" duration="873000" />
+      <workItem from="1569858459208" duration="457000" />
+      <workItem from="1569868519423" duration="1880000" />
+      <workItem from="1569917814283" duration="1023000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
