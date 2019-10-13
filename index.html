@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 
 <head>
-
     <!-- Standard Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Site Web de l'Association Charlemagne Informatique" />
-    <meta name="keywords"
-        content="ACI, Association Charlemagne Informatique, DUT Informatique, IUT Nancy Charlemagne, Nancy-Charlemagne" />
+    <meta name="keywords" content="ACI, Association Charlemagne Informatique, DUT Informatique, IUT Nancy Charlemagne, Nancy-Charlemagne" />
     <meta name="author" content="Jules Sayer <jules.sayr@gmail.com>" />
     <meta name="author" content="Flavien Chagras <chagras.flavien@gmail.com>" />
     <meta name="robots" content="index, follow, noarchive, noimageindex" />
@@ -29,17 +26,18 @@
     <meta property="og:site_name" content="ACI" />
 
     <!-- Page informations -->
-
     <title>ACI - Accueil</title>
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" href="assets/css/index.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
 </head>
 
 <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="103675997682543" logged_in_greeting="Hey! Besoin d'infos? On est dispo pour te répondre! :)" logged_out_greeting="Hey! Besoin d'infos? On est dispo pour te répondre! :)"></div>
     <!-- Header -->
     <header>
         <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -78,7 +76,6 @@
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Précédent</span>
             </a>
-
             <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Suivant</span>
@@ -87,7 +84,6 @@
     </header>
 
     <!-- Navigation -->
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" data-toggle="affix">
         <div class="container">
             <a class="navbar-brand" href="/"><img src="assets/images/logo.png" height="28" width="28" alt="Logo"></a>
@@ -106,31 +102,22 @@
                     <li class="nav-item">
                         <a class="nav-link" href="partners.html">Partenariats</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Countdown -->
-
+    <!-- Page -->
     <section class="bg-light">
         <div class="container text-center py-3" id="main">
-            <div class="card-group">
+            <div id="timelinefb" class="card-group">
                 <div class="card mx-2 shadow-lg">
                     <div class="card-header">
                         Les événements
                     </div>
-                    <ul class="list-group list-group-flush"></ul>
                     <div class="card-body">
-                        <div class="fb-page" data-href="https://www.facebook.com/ACI2020/" data-tabs="timeline"
-                            data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true"
-                            data-hide-cover="false" data-show-facepile="true">
-                            <blockquote cite="https://www.facebook.com/ACI2020/" class="fb-xfbml-parse-ignore"><a
-                                    href="https://www.facebook.com/ACI2020/">
-                                    ACI</a></blockquote>
+                        <div id="fb-container">
+                            <div class="fb-page" data-href="https://www.facebook.com/ACI2020/" data-tabs="timeline" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ACI2020/" class="fb-xfbml-parse-ignore">Ici devrait s'afficher la timeline de notre page facebook, si vous voyez ce message c'est que malheursement votre navigateur bloque ou ne prend pas en charge le plugin facebook, vous pouvez donc accéder à la page en cliquant ici: <a href="https://www.facebook.com/ACI2020/">ACI</a></blockquote></div>
                         </div>
                     </div>
                 </div>
@@ -141,30 +128,41 @@
                     </div>
                     <div class="card-body">
                         <p>
-                            Nous recherchons des bénévoles pour le trail des lumières le <b>Samedi 19 Octobre</b>. Ceux
-                            qui viendront nous aider auront
-                            <b>5€</b> sur les sweats et de <b>2€</b> sur l'entrée au Lasermaxx !
-
-                            <hr class="featurette-divider mx-auto">
-
+                            <img src="assets/images/party/lasermaxx.png" class="img-fluid">
+                            <hr class="featurette-divider mx-auto" style="margin: 2rem 2rem!important;">
                             Nous organisons une soirée au Lasermaxx Houdemont le <b>Mercredi 23 Octobre</b> à partir de
                             <b>19h30</b> jusqu'à <b>23h</b>.
-                            <br>Entrées:<br>15€ non adhérents<br>12€ adhérents
-                            <br>
                             Plus d'infos sur le groupe !
                         </p>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                             <input type="hidden" name="cmd" value="_s-xclick">
                             <input type="hidden" name="hosted_button_id" value="CCLD4YY7C3K2W">
                             <table class="col-md my-2">
-                                <tr><td><input type="hidden" name="on0" value="Adhérent">Adhérent</td></tr><tr><td><select name="os0">
-                                <option value="Oui">Oui €12,00 EUR</option>
-                                <option value="Non">Non €15,00 EUR</option>
-                            </select> </td></tr>
-                                <tr><td><input type="hidden" name="on1" value="Prénom / Nom">Prénom / Nom</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
+                                <tr>
+                                    <td><input type="hidden" name="on0" value="Adhérent">Adhérent</td>
+                                </tr>
+                                <tr>
+                                    <td><select name="os0">
+                                            <option value="Oui">Oui €12,00 EUR</option>
+                                            <option value="Non">Non €15,00 EUR</option>
+                                        </select> </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="hidden" name="on1" value="Prénom / Nom">Prénom / Nom</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="os1" maxlength="200"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="hidden" name="on2" value="Pseudo">Pseudo</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="os2" maxlength="200"></td>
+                                </tr>
                             </table>
                             <input type="hidden" name="currency_code" value="EUR">
-                            <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
+                            <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_paynowCC_LG.gif" border="0" name="submit"
+                                alt="PayPal, le réflexe sécurité pour payer en ligne">
                             <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
                         </form>
                     </div>
@@ -173,39 +171,9 @@
                 </div>
             </div>
         </div>
-
-        <!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v4.0'
-          });
-        };
-
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-      <!-- Your customer chat code -->
-      <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="103675997682543"
-        theme_color="#0084ff"
-        logged_in_greeting="Hey! Besoin d'infos? On est dispo pour te répondre! :)"
-        logged_out_greeting="Hey! Besoin d'infos? On est dispo pour te répondre! :)">
-      </div>
     </section>
 
-    <!-- Infos -->
-    <!-- Teasing -->
-    <!-- FOOTER -->
-
+    <!-- Footer -->
     <footer class="container">
         <p class="float-right px-1"><a href="#">Back to top</a></p>
         <p class="px-3">&copy; 2019-2020 Association Charlemagne Informatique &middot; <a
@@ -213,6 +181,23 @@
                 href="https://www.facebook.com/groups/328784261367017/">Facebook</a></p>
     </footer>
 
+    <!-- Facebook Plugin -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v4.0"></script>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v4.0'
+            });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108435065-2"></script>
@@ -224,16 +209,21 @@
         gtag('js', new Date());
         gtag('config', 'UA-108435065-2');
     </script>
-    <script>
-        window.onresize = function(){
-            setTimeout( function(){ self.location.reload()}, 0)};
-    </script>
-    <script id="fb" async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v4.0"></script>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $(window).bind("load resize", function () {
+                setTimeout(function () {
+                    var container_width = $('#timelinefb').width();
+                    var container_height = $('#timelinefb').height();
+                    $('#fb-container').html('<div class="fb-page" data-href="https://www.facebook.com/ACI2020/" data-tabs="timeline" data-width="'+ container_width +'" data-height="'+ container_height +'" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ACI2020/" class="fb-xfbml-parse-ignore">Ici devrait s\'afficher la timeline de notre page facebook, si vous voyez ce message c\'est que malheursement votre navigateur bloque ou ne prend pas en charge le plugin facebook, vous pouvez donc accéder à la page en cliquant ici: <a href="https://www.facebook.com/ACI2020/">ACI</a></blockquote></div>');
+                    FB.XFBML.parse();
+                }, 100);
+            });
+        });
+    </script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/index.js"></script>
 </body>
 
 </html>
