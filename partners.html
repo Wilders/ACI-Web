@@ -35,6 +35,10 @@
 </head>
 
 <body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat" attribution=setup_tool page_id="103675997682543" logged_in_greeting="Hey! Besoin d'infos? On est dispo pour te répondre! :)" logged_out_greeting="Hey! Besoin d'infos? On est dispo pour te répondre! :)"></div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top" data-toggle="affix">
         <div class="container">
@@ -53,9 +57,6 @@
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="partners.html">Partenariats <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -391,6 +392,24 @@
         <p>&copy; 2019-2020 Association Charlemagne Informatique &middot; <a href="contact.html">Contact</a> &middot; <a
                 href="https://www.facebook.com/groups/328784261367017/">Facebook</a></p>
     </footer>
+
+    <!-- Facebook Plugin -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v4.0"></script>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v4.0'
+            });
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108435065-2"></script>
     <script>
